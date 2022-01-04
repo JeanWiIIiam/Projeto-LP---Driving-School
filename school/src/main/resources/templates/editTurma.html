@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar turma</title>
+    <link rel="stylesheet" href="cadTurma.css">
+
+    <style>
+        nav > a.turma{
+            color: white;
+        }
+        nav > a.listTurma{
+            color: #118DFF;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function validaTurma(){
+            var turno = document.getElementById('turno').value;
+            var hora = document.getElementById('hora').value;
+            if(turno == "Matutino"){
+                if(hora < "06:00" || hora > "11:00"){
+                    alert("Por favor, insira uma horário válido, entre 06:00 e 11:00");
+                    return false;
+                }
+            }
+
+            else if(turno == "Vespertino"){
+                if(hora < "13:00" || hora > "17:00"){
+                    alert("Por favor, insira uma horário válido, entre 13:00 e 17:00");
+                    return false;
+                }
+            }
+
+            else if(turno == "Noturno"){
+                if(hora < "19:00" || hora > "23:00"){
+                    alert("Por favor, insira uma horário válido, entre 19:00 e 23:00");
+                    return false;
+                }
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" class="logo">     
+    </header>
+
+    <main>
+        <nav>
+            <p>Cadastrar</p>
+            <a href="/cadAluno" class="cliente">Aluno</a>
+            <a href="/cadInstrutor" class="instrutor">Instrutor</a>
+            <a href="/cadTurma" class="turma">Turma</a>
+            <a href="/cadSala" class="sala">Sala</a>
+            <p>Listar</p>
+            <a href="/listarAlunos" class="listCliente">Aluno</a>
+            <a href="/listarInstrutores" class="listInstrutor">Instrutor</a>
+            <a href="/listarTurmas" class="listTurma">Turma</a>
+            <a href="/listarSalas" class="listSala">Sala</a>
+
+        </nav>
+        <div class="box">
+            <form th:action="@{/altTurma(id=${turma.id})}"  th:object="${turma}" method="POST" onsubmit="return validaTurma()">
+                <fieldset>
+                    <legend><b>Editar Turma</b></legend>
+                    <br>
+
+                    <div class="inputBox nome">
+                        <label for="nome">Nome</label><br>
+                        <input type="text" th:field="${turma.nome}" th:value="${turma.nome}" name="nome" id="nome" required>
+
+                        
+                        <div class="inputBox categoria">
+                            <label for="categoria">Categoria</label><br>
+                            <select th:field="${turma.categoria}" th:value="${turma.categoria}" name="categoria" id="categoria" required>
+                                <option value="">Selecione</option>
+                                <option value="A">Categoria A</option>
+                                <option value="B">Categoria B</option>
+                                <option value="AB">Categoria AB</option>
+                            </select>
+                        </div>
+
+                        <div class="inputBox turno">
+                        <label for="turno">Turno</label><br>
+                        <select th:field="${turma.turno}" th:value="${turma.turno}" name="turno" id="turno" required>
+                            <option value="">Selecione</option>
+                            <option value="Matutino">Matutino</option>
+                            <option value="Vespertino">Vespertino</option>
+                            <option value="Noturno">Noturno</option>
+                        </select>
+                    </div>
+                    </div>
+                    <br><br>
+
+                    <div id="inputBox">
+                        <label for="sala">Sala</label><br>
+                        <select th:field="${turma.sala}" name="sala" id="sala" required>
+                            <option value="">Selecione</option>
+                            <option th:value = "${salaList.num}" th:each="salaList : ${salaList}">Sala <span th:text="${salaList.num}"></option>
+                        </select>
+                    <div class="hora">
+                        <label for="hora">Horário</label><br>
+                        <input type="time" th:field="${turma.horario}" th:value="${turma.horario}" name="hora" id="hora" required>
+                    </div>
+                    </div>
+                    <br><br>
+
+                    <div class="inputBox">
+                        <label for="instrutor">Instrutor</label><br>
+                        <select th:field="${turma.instrutor}" th:value="${turma.instrutor}" name="instrutor" id="selectInstrutor" required>
+                            <option value="">Selecione</option>
+                            <option th:value = "${instrutorList.nome}" th:each="instrutorList : ${instrutorList}"><span th:text="${instrutorList.catCNH}"></span> - <span th:text="${instrutorList.nome}"></span></option>
+                        </select>
+
+                    </div>
+
+                </fieldset>
+                <div class="botoes">
+                    <button type="reset" name="cancelar" class="cancelar">Cancelar</button>
+                    <button type="submit" name="salvar" class="salvar">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

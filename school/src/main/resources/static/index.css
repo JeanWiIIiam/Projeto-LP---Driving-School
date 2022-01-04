@@ -1,0 +1,93 @@
+/* Estrutura do site
+------------------------------------ */
+body {
+	
+	font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+a:link, a:active, a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #70b2e7;
+}
+
+/* Logo 
+------------------------------------ */
+
+header{
+    margin: 0;
+    padding-top: 10px;
+    background-color: #1A3B59;
+    height: 150px;
+    width: 100%;
+    color: white;
+    position: relative;
+
+    
+
+    background-image: linear-gradient(to bottom, #1A3B59, #0e2031);
+}
+
+
+h1{
+    font-size: min(10vh, 20px);
+    padding-left: 45%;
+    padding-top: 2%;
+    text-shadow: -1px 2px 3px #000000;
+}
+.carro{
+    position: absolute;
+    height: 150px;
+    width: 340px;
+    top: 5%;
+    left: 3%;
+}
+
+
+/*main{
+    margin: auto;
+    height: 547px;
+    min-width: 300px; 
+    max-width: 1360px; 
+    background-color: #d8e9f5;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.514);
+}*/
+main {
+    min-width: 300px; 
+    max-width: 1000px;
+    height: 100vh;
+    margin: auto;
+    background-color: #d8e9f5;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.432);
+}
+
+nav {
+    background-color: #0e2031;
+    padding: 10px 0px;
+    box-shadow: 0px 7px 8px rgb(0 0 0 / 50%);
+    
+    text-align: center;
+}
+
+nav > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+
+
+
+

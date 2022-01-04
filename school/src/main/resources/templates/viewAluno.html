@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar aluno</title>
+    <link rel="stylesheet" href="cadAluno.css">
+
+    <style>
+        nav > a.cliente{
+            color: white;
+        }
+        nav > a.listCliente{
+            color: #118DFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" class="logo">     
+    </header>
+    
+
+
+    <main>
+        <nav>
+            <p>Cadastrar</p>
+            <a href="/cadAluno" class="cliente">Aluno</a>
+            <a href="/cadInstrutor" class="instrutor">Instrutor</a>
+            <a href="/cadTurma" class="turma">Turma</a>
+            <a href="/cadSala" class="sala">Sala</a>
+            <p>Listar</p>
+            <a href="/listarAlunos" class="listCliente">Aluno</a>
+            <a href="/listarInstrutores" class="listInstrutor">Instrutor</a>
+            <a href="/listarTurmas" class="listTurma">Turma</a>
+            <a href="/listarSalas" class="listSala">Sala</a>
+
+        </nav>
+        <div class="box">
+            <form th:action="@{/altAluno(id=${aluno.id})}"  th:object="${aluno}" method="POST">
+                <fieldset>
+                    <legend><b>Visualizar aluno</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" th:field="${aluno.nome}" th:value="${aluno.nome}" required>
+                        <label for="nome" class="labelInput">Nome completo</label>
+                    </div>
+                    <br><br>
+                    
+                    <div id="divCpf" class="inputBox">
+                        <input type="text" name="cpf" id="cpf" class="inputUser" th:field="${aluno.cpf}" th:value="${aluno.cpf}"required onkeypress="$(this).mask('000.000.000-00')">
+                        <label for="cpf" class="labelInput">CPF</label>
+                        <div id="divEmail">
+                            <input type="text" name="email" id="email" class="inputUser" th:field="${aluno.email}" th:value="${aluno.email}" required>
+                            <label for="email" class="labelInput">Email</label>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div id="divRg" class="inputBox">
+                        <input type="text" name="rg" id="rg" class="inputUser" th:field="${aluno.rg}" th:value="${aluno.rg}" required onkeypress="$(this).mask('0000000-0')">
+                        <label for="rg" class="labelInput">RG</label>
+                        <div id="divTelefone">
+                            <input type="text" name="telefone" id="telefone" class="inputUser" th:field="${aluno.telefone}" th:value="${aluno.telefone}" required onkeypress="$(this).mask('(00) 00000-0000')">
+                            <label for="telefone" class="labelInput">Telefone</label>
+                        </div>
+                    </div>
+                    
+                    <div id="divEndereco" class="inputBox">
+                        <input type="text" name="endereco" id="endereco" class="inputUser" th:field="${aluno.endereco}" th:value="${aluno.endereco}"required>
+                        <label for="endereco" class="labelInput">Endereço</label>
+                        <br><br><br>
+                        <div id="divNum">
+
+                            <input type="number" name="numero" id="numero" class="inputUser" th:field="${aluno.num}" th:value="${aluno.num}" required>
+                            <label for="numero" class="labelInput">Número</label>
+                        </div>
+                        <div id="divBairro">
+                            <input type="text" name="bairro" id="bairro" class="inputUser" th:field="${aluno.bairro}" th:value="${aluno.bairro}" required>
+                            <label for="bairro" class="labelInput">Bairro</label>
+                        </div>
+                    </div>
+
+                    <div id="divData">
+                        <label for="data_nascimento">Data de Nascimento</label><br>
+                        <input type="date" name="data_nascimento" id="data_nascimento" th:field="${aluno.dataNascimento}" th:value="${aluno.dataNascimento}" required>
+                    </div>
+
+                    <div class="inputBox">
+                        
+                        <div id="divCat">
+                        <label for="categoria">CNH Desejada</label><br>
+                            <select name="categoria" id="categoria" th:field="${aluno.cnh}" th:value="${aluno.cnh}"required>
+                                <option value="A">Categoria A</option>
+                                <option value="B">Categoria B</option>
+                                <option value="AB">Categoria AB</option>
+                            </select>
+   
+                        </div>
+                    </div>
+                 
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

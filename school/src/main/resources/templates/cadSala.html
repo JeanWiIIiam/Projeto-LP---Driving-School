@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar sala</title>
+    <link rel="stylesheet" href="cadSala.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" class="logo">     
+    </header>
+
+    <main>
+        <nav>
+            <p>Cadastrar</p>
+            <a href="/cadAluno" class="cliente">Aluno</a>
+            <a href="/cadInstrutor" class="instrutor">Instrutor</a>
+            <a href="/cadTurma" class="turma">Turma</a>
+            <a href="/cadSala" class="sala">Sala</a>
+            <p>Listar</p>
+            <a href="/listarAlunos" class="listCliente">Aluno</a>
+            <a href="/listarInstrutores" class="listInstrutor">Instrutor</a>
+            <a href="/listarTurmas" class="listTurma">Turma</a>
+            <a href="/listarSalas" class="listSala">Sala</a>
+
+        </nav>
+        <div class="box">
+            <form th:action="@{/salaAdd}"  th:object="${sala}"  method="POST">
+                <fieldset>
+                    <legend><b>Cadastro de Sala</b></legend>
+                    <br><br><br>
+                    <div class="inputBox">
+                        <input th:field="*{num}"type="number" name="numSala" id="numSala" class="inputUser" required>
+                        <label for="numSala" class="labelInput">Número da sala</label>
+                    </div>
+                    <br><br><br><br>
+                    <div class="inputBox">
+                        <input th:field="*{capacidade}"type="number" name="capacidade" id="capacidade" class="inputUser" required>
+                        <label for="capacidade" class="labelInput">Capacidade da sala</label>
+                    </div>
+                    <br>
+                    
+                </fieldset>
+                <div class="botoes">
+                    <button type="reset" name="cancelar" class="cancelar">Cancelar</button>
+                    <button type="submit" name="salvar" class="salvar">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http:ultraq.net.nez/thymeleaf/layout">
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Instrutor</title>
+    <link rel="stylesheet" href="cadInstrutor.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" class="logo">     
+    </header>
+    
+
+
+    <main>
+        <nav>
+            <p>Cadastrar</p>
+            <a href="/cadAluno" class="cliente">Aluno</a>
+            <a href="/cadInstrutor" class="instrutor">Instrutor</a>
+            <a href="/cadTurma" class="turma">Turma</a>
+            <a href="/cadSala" class="sala">Sala</a>
+            <p>Listar</p>
+            <a href="/listarAlunos" class="listCliente">Aluno</a>
+            <a href="/listarInstrutores" class="listInstrutor">Instrutor</a>
+            <a href="/listarTurmas" class="listTurma">Turma</a>
+            <a href="/listarSalas" class="listSala">Sala</a>
+
+        </nav>
+        <div class="box">
+         <form th:action="@{/instrutorAdd}"  th:object="${instrutor}" method="POST">
+                <fieldset>
+                    <legend><b>Cadastro de Instrutor</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" th:field="*{nome}" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome completo</label>
+                    </div>
+                    <br><br>
+                    
+                    <div id="divCpf" class="inputBox">
+                        <input type="text" th:field="*{cpf}" name="cpf" id="cpf" class="inputUser" required onkeypress="$(this).mask('000.000.000-00')">
+                        <label for="cpf" class="labelInput">CPF</label>
+                        <div id="divEmail">
+                            <input type="email" th:field="*{email}" name="email" id="email" class="inputUser" required>
+                            <label for="email" class="labelInput">Email</label>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div id="divRg" class="inputBox">
+                        <input type="text" th:field="*{rg}" name="rg" id="rg" class="inputUser" required onkeypress="$(this).mask('0000000-0')">
+                        <label for="rg" class="labelInput">RG</label>
+                        <div id="divTelefone">
+                            <input type="text" th:field="*{telefone}" name="telefone" id="telefone" class="inputUser" required onkeypress="$(this).mask('(00) 00000-0000')">
+                            <label for="telefone" class="labelInput">Telefone</label>
+                        </div>
+                    </div>
+                    
+                    <div id="divEndereco" class="inputBox">
+                        <input type="text" name="endereco" th:field="*{endereco}" id="endereco" class="inputUser" required>
+                        <label for="endereco" class="labelInput">Endereço</label>
+                        <br><br><br>
+                        <div id="divNum">
+
+                            <input type="number" th:field="*{num}" name="numero" id="numero" class="inputUser" required>
+                            <label for="numero" class="labelInput">Número</label>
+                        </div>
+                        <div id="divBairro">
+                            <input type="text" th:field="*{bairro}" name="bairro" id="bairro" class="inputUser" required>
+                            <label for="bairro" class="labelInput">Bairro</label>
+                        </div>
+                    </div>
+
+                    <div id="divData">
+                        <label for="data_nascimento">Data de Nascimento</label><br>
+                        <input type="date" th:field="*{dataNascimento}" name="data_nascimento" id="data_nascimento" required>
+                       
+                        <div id="divPrimCnh">
+                            <label for="primCnh">Primeira Habilitação</label><br>
+                            <input type="date" th:field="*{primeiraHabilitacao}" name="primCnh" id="primCnh" required>
+                        </div>
+                    </div>
+
+                    <div id="divCnh">
+                        <div id="divNumCnh">
+                            <input type="number" th:field="*{numCNH}" name="numCnh" id="numCnh" class="inputUser" required>
+                            <label for="nome" class="labelInput">Número CNH</label>
+                        </div>
+                        <br>
+                        <div id="divCat">
+                            <label for="categoria">Categoria CNH</label><br>
+                            <select  th:field="*{catCNH}" name="categoria" id="categoria" required>
+                                <option value="">Selecione</option>
+                                <option value="A">Categoria A</option>
+                                <option value="B">Categoria B</option>
+                                <option value="AB">Categoria AB</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div id="divEmissao">
+                            <label for="data_emissao">Data de emissão CNH</label><br>
+                            <input type="date" th:field="*{dataEmissaoCNH}" name="emissao" id="emissao" required>
+                        </div>
+                        <br>
+                        <div id="divValidade">
+                            <label for="validade">Validade CNH</label><br>
+                            <input type="date" th:field="*{valCNH}" name="validade" id="validade" required>
+                        </div>
+                        <br>
+                    </div>
+                
+                </fieldset>
+                <div class="botoes">
+                    <button type="reset" name="cancelar" class="cancelar">Cancelar</button>
+                    <button type="submit" name="salvar" class="salvar">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http:ultraq.net.nez/thymeleaf/layout">
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Aluno</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+    <style>
+        body{
+    margin: 0;
+    padding: 0; 
+    background-color: #ecf5fa;
+    }
+
+    header{
+        margin: 0;
+        padding-top: 10px;
+        background-color: #1A3B59;
+        height: 100px;
+        width: 100%;
+        color: white;
+        position: relative;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.514);
+    }
+
+    .logo{
+        position: absolute;
+        height: 90%;
+        top: 5%;
+        left: 3%;
+    }
+
+
+    main{
+        margin: auto;
+        height: 547px;
+        min-width: 300px; 
+        max-width: 1360px; 
+        background-color: #d8e9f5;
+        position: relative;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.514);
+    }
+
+    nav{
+        margin: 0;
+        background-color: #1E2E38;
+        height: 100%;
+        width: 15%;
+        overflow: hidden;
+        z-index: 1;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    nav > p{
+        color: white;
+        font-size: 1.1em;
+        text-decoration: none;
+        display: block;
+        padding-top: 30px;
+        padding-left: 15px;
+        margin-top: 0.5px;
+        text-align: left;
+        letter-spacing: 1px;
+        font-weight: bolder;
+    }    
+
+    nav > a.seta{
+        position: relative;
+        width: 10px;
+        height: 20px;
+        text-align: right;
+        color: white;
+        margin: 4px 0 4px 168px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    nav > a{
+        color: white;
+        font-size: 1em;
+        text-decoration: none;
+        display: block;
+        padding-top: 10px;
+        margin-top: 0.5px;
+        text-align: center;
+        letter-spacing: .5px;
+    }
+
+    nav > a:hover{
+        color: #118DFF;
+        transition: 0.3s;
+    }
+
+    .box{
+    color: black;
+    position: absolute;
+    top: 230px;
+    left: 770px;
+    transform: translate(-50%,-50%);
+    background-color: #1A3B59;
+    padding: 15px 15px 20px 15px;
+    border-radius: 10px;
+    width: 700px;
+    height: 170px;
+    box-shadow: 0px 0px 5px black;
+    margin: auto;
+    text-align: center;
+    }
+
+    h1{
+        color: white;
+        font-size: 70px;
+        font-weight: lighter;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" class="logo">  
+    </header>
+    
+    <main>
+        <nav>
+            <p>Cadastrar</p>
+            <a href="/cadAluno" class="cliente">Aluno</a>
+            <a href="/cadInstrutor" class="instrutor">Instrutor</a>
+            <a href="/cadTurma" class="turma">Turma</a>
+            <a href="/cadSala" class="sala">Sala</a>
+            <p>Listar</p>
+            <a href="/listarAlunos" class="listCliente">Aluno</a>
+            <a href="/listarInstrutores" class="listInstrutor">Instrutor</a>
+            <a href="/listarTurmas" class="listTurma">Turma</a>
+            <a href="/listarSalas" class="listSala">Sala</a>
+        </nav>
+
+        <div class="box">
+            <h1>Bem-vindo de volta!</h1>
+        </div>
+
+    </main>
+</body>

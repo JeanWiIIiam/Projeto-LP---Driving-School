@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "driving-school-fe314",
+  "private_key_id": "b5749021d125fd2f05c26742f414fd74544cdf8f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDH6+nO10QKV9fu\nxeaEjj/GwKwAJ3RzmpTvyemmQlyqkhPSE6WjEjzP9fIyhSorpmWE22aundzQM7eA\n5prhBmxxgaHP2v6Jl4SWQ4eJurStClKJqK0KkKsw0IFsZSHwlFtzo/8r6NJI71wx\nQwCn6KDc6z2V8mvqyXZegyjJMnKI8ST2k5PDiVKDUCk67+yobWTXtqGx+csSRR94\nd7fpmLLU+syekRafN9VT3eYATWdhPWJLg6n0oFLFV5Ni5579x5THh97Ivwux/UlJ\n6EeesY4ZSB/X8bpGHq+IFq01CCIq5TPv44Z1RF5ZWOXg75eXUXls3ZT04hpBZO4X\nSJXWj2NrAgMBAAECggEAEjs81KyD22+cVP1+Ipt4TG84oED42SwBJgbjRFKr8bAl\nl5RMGB1rJ0nV/u5u5JElk+KQMB9cSi5VLy+YcynrTMSWFYbyjGihYjShURmSLW+S\nDFSyBxMfUXHKQ7DLUg2tc1PCyuXN+3G8lg92qVlJBix7rsdvOPeLUF4ko4hysnMl\n+DUolD0XkotQGuD3pQ9BDWwXryrvn6zDv6GelsaIALFNjWwbLNjAPKXadMDGrnkR\nYiY/v71aSDHlWNbI5hjsdKcuJYDalkyYrV7vZqs6qELp38qdf+LmpELSGdCj0uA9\nQ0c+k/G0572sYHBXb14NPvXxTUjVadVdU19vZL42/QKBgQDlgHtgQJUKUj9i+IKJ\nD0qjEN8y/YGh5XUMlEVN6ao1+AEJjG5G+SB1iNDwJLBn3h39piiXlPIW+3G3WzTI\nOr+2WcDtxWANjWswEThhlOJiEFqWYFpVI2tgq04eiXIGx8Jk4JCAY9iWe0glLG7r\nNOkXJsrodFmFCtb07C3KReKzjwKBgQDfARuzjE5kb2UAgY/poEAocXzavmFhwSy0\n38/iqziqQhK+0hH+k3Cos6NDD/fqv40kIMGOuPxtSCUPVe4XFTHdohJ3l1I5ZdIz\nhe8nRUz79CD0M6gLkZTk+AGeYnqk6BHnmm3Hq+8eGGyKupjhVxmbQ7ADz3M+KpeE\nwXE+vUK0ZQKBgQCfXrdOQcq9nhvSWIwdLXdBAYhdWllY2YSMtbHixu6iB5SA0voJ\nYxq9Q8MD4BZ4KnBdIbNyf8YVW4q+LyHaIaHbuTwWYUewYZIbkPm8Ga2TN5QQdNyF\n3tDEEnFvFzcNqk49ywvNfIh9ByM0XUSxJM7wesnQ3msDzmEzN4ccvacN1QKBgQCN\noo6NgtdnQrjLkX5ty7Hz/eBmrfP7uk1Cs8O9GzJqMHznZVS4c7xh6XYP6dxz5CUo\nhQVqOGNapS+khdcqIfQB6CYCfsFiYyEWSEKUlpdGjs8/Sm+4qUYABuRATBvJEPwO\nNS70WmcMnkaR9eGTfVZuHpd0VBXFrhd94b6jMmFjYQKBgQC0NP+v811Ml01gh77N\nzv3Q3zSA0trrRbYWsMvKjYLsleJvd1KJWPg1fIXZapj9HJFVUhhQbrEfJYSaznwU\nIS9apDxNPKnxLaDEmA0IY3sLnmyiOU+L4UqBSH3xUbrlzoKnh+qIDiRBtbUSPRbe\nfj/Z5WLXKRdoiLgP4pOixw1IGA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-ozdvu@driving-school-fe314.iam.gserviceaccount.com",
+  "client_id": "103683364159694379336",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ozdvu%40driving-school-fe314.iam.gserviceaccount.com"
+}
